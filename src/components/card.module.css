@@ -1,0 +1,41 @@
+.card {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) 2fr;
+}
+
+.description {
+    order: 0;
+    padding: 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    margin-top: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.media {
+    order: 1;
+}
+
+.smallCard {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.smallCard .content {
+    margin-top: 0;
+}
+
+.smallCard .description {
+    order: 1;
+    gap: 8px;
+}
+
+.smallCard .media {
+    order: 0;
+}
