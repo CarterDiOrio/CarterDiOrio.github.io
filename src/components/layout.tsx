@@ -80,9 +80,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                         <NavLink p={2} href="/projects" variant="navbar">
                             Projects
                         </NavLink>
-                        <NavLink p={2} href="/about" variant="navbar">
+                        {/* <NavLink p={2} href="/about" variant="navbar">
                             About
-                        </NavLink>
+                        </NavLink> */}
                         <NavLink
                             href="https://www.linkedin.com/in/carter-diorio-b445041bb/"
                             sx={{

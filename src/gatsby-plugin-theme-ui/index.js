@@ -112,7 +112,7 @@ const theme = {
             letterSpacing: "title",
         },
         cardtitle: {
-            fontSize: [3, 4, 5],
+            fontSize: [3, 4, 4],
             letterSpacing: "title",
             lineHeight: "title",
         },
