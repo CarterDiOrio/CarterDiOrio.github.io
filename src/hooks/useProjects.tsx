@@ -20,6 +20,7 @@ const useProjects = (): Project[] => {
                             picture
                             subtitle
                             tags
+                            order
                         }
                     }
                 }

@@ -175,6 +175,14 @@ const theme = {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+        },
+        tableOfContents: {
+            fontSize: [1, 2, 2],
+            color: "muted",
+        },
+        tableOfContentsActive: {
+            fontSize: [1, 2, 2],
+            color: "primary",
         }
     },
     alerts: {
@@ -273,6 +281,14 @@ const theme = {
             borderRadius: "extra",
             boxShadow: "card",
             overflow: "hidden",
+        },
+        tableOfContents: {
+            variant: "cards.primary",
+            position: "sticky",
+            position: "-webkit-sticky",
+            top: "16px",
+            marginRight: "0px",
+            p: [0, 0, 0, 16]
         },
         sunken: {
             bg: "sunken",

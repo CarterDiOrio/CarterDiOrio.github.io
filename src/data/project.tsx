@@ -10,6 +10,7 @@ interface Project {
         picture: string;
         subtitle: string;
         tags: string[];
+        order: number;
     };
 }
 

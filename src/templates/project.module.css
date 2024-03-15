@@ -1,0 +1,22 @@
+.projectLayout {
+    display: grid;
+    margin: "auto";
+    max-width: 1600px;
+    grid-template-columns: minmax(300px, 400px) minmax(600px, 1fr);
+}
+
+.tableOfContents {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 16px;
+}
+
+@media screen and (max-width: 900px) {
+    .projectLayout {
+        grid-template-columns: 1fr;
+    }
+
+    .tableOfContents {
+        display: none;
+    }
+}

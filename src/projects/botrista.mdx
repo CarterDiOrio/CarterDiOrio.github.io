@@ -5,14 +5,16 @@ date: "2023-12-09"
 url: "botrista"
 picture: "/botrista.gif"
 tags: "ROS2, MoveIt, Tf, April Tags, Depth Cameras"
+github: "https://github.com/CarterDiOrio/Botrista"
+order: "0"
 featured: true
+underconstruction: false
 ---
 
 import { YouTube } from 'mdx-embed'
 import { Divider } from 'theme-ui'
 
 # Botrista
-[Github](https://github.com/CarterDiOrio/Botrista)
 <Divider/>
 
 <div style={{
@@ -25,17 +27,22 @@ import { Divider } from 'theme-ui'
 
 Botrista (robot-barista) is a seven degree of freedom Franka Emika Panda robot arm
 that makes pour over coffee. It was made as the final project for Mechanical Engineering
-495 - Embedded Systems in robotics.
+495 - Embedded Systems in robotics taught by Dr. Elwin. Each team was a group of five students and
+we were given three weeks to complete the project.
 
-Collaborators:
-- Anuj
-- Stephen Ferro
-- Jihai
-- Kyle Wang
+My collaborators were:
+- [Anuj Natraj](https://anujn9.github.io/)
+- [Stephen Ferro](https://scferro.github.io)
+- [Jihai Zhao](https://jihaizhao.github.io/)
+- [Kyle Wang](https://kylew239.github.io/)
 
 Making pour over coffee is mainly a manipulation focused task. To reliably make coffee
 a robust grasping process is needed and this leads to three main technical challenges: detecting object 
 positions, detecting object handles, and grasping.
+
+<br/>
+<Divider/>
+<br/>
 
 ## Object Positioning
 
@@ -55,6 +62,10 @@ to find the transform from the camera frame to the robot base.
 The camera is a Intel Realsense D435i and it is mounted to the ceiling above the robot to be able to see the whole workspace.
 The frames corresponding to each tag are shown in the Rviz screenshot above.
 
+<br/>
+<Divider/>
+<br/>
+
 ## Handle Detection
 
 <div style={{
@@ -69,6 +80,11 @@ are all different shapes and sizes, this makes both detecting directly and mount
 tag from two pieces of different colored tape. In addition to depth from the end effector mounted D405, this allows for detecting the pose and orientation of the handle.
 The green tape signifies the 'head' or 'front' of the handle while the blue is the main 'body' and grasp location. The two sections were identified using color thresholding
 and their centers were found using the center of mass of the detected contour.
+
+
+<br/>
+<Divider/>
+<br/>
 
 ## Grasping
 

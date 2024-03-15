@@ -13,9 +13,9 @@ const config: GatsbyConfig = {
         "gatsby-plugin-theme-ui",
         "gatsby-plugin-image",
         "gatsby-plugin-sharp",
-        `gatsby-transformer-remark`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-mdx-embed`,
+        `gatsby-transformer-remark`,
         {
             resolve: "gatsby-source-filesystem",
             options: {
@@ -70,6 +70,7 @@ const config: GatsbyConfig = {
                             maxWidth: 1200,
                         },
                     },
+                    `gatsby-remark-autolink-headers`
                 ],
             },
         },

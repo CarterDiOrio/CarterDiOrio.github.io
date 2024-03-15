@@ -10,8 +10,10 @@ import { Box, Divider, Heading } from "theme-ui";
 
 const ProjectsPage = () => {
     const projects = useProjects();
+    const sorted_projects = projects.sort((a, b) => {
+        return a.frontmatter.order - b.frontmatter.order;
+    });
     const featuredProject = useFeaturedProject();
-    console.log(featuredProject);
 
     return (
         <Layout>
@@ -27,7 +29,7 @@ const ProjectsPage = () => {
                 columnsCountBreakPoints={{ 500: 1, 900: 2, 1600: 3 }}
             >
                 <Masonry gutter="16px">
-                    {projects
+                    {sorted_projects
                         .filter(
                             // Ignore the featured project, don't want to list it twice
                             (project) =>
