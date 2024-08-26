@@ -95,12 +95,35 @@ const FeaturedProjectCard: React.FC<ProjectCardProps> = ({
                             </Box>
                         )}
                     </div>
-                    <Image
-                        className={cardStyles.media}
-                        alt="image"
-                        src={project.frontmatter.picture}
-                        variant="primary"
-                    />
+                    {project.frontmatter.picture.endsWith(".mp4") && (
+                            <video
+                                className={cardStyles.media}
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                style={{
+                                    maxHeight: "100%",
+                                    maxWidth: "100%",
+                                }}
+                            >
+                                <source
+                                    src={project.frontmatter.picture}
+                                    type="video/mp4"
+                                />
+                            </video>
+                        )}
+                    {
+                        // if the picture is not a video
+                        !project.frontmatter.picture.endsWith(".mp4") && (
+                            <Image
+                                className={cardStyles.media}
+                                alt="image"
+                                src={project.frontmatter.picture}
+                                variant="primary"
+                            />
+                        )
+                    }
                 </div>
             </a>
         </Card>

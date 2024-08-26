@@ -17,7 +17,11 @@ const ProjectPost = ({ data, children }: any) => {
                     paddingRight: "16px"
                 }}>
                     <Card className={projectStyles.tableOfContents} variant="tableOfContents">
-                        <p>Github: <a href={data.mdx.frontmatter.github} sx={{color: "primary"}}>Repository</a> </p>
+                        {
+                            (data.mdx.frontmatter.github) && (
+                                <p>Github: <a href={data.mdx.frontmatter.github} sx={{color: "primary"}}>Repository</a> </p>
+                            )
+                        }
                         <TableOfContents items={data.mdx.tableOfContents.items} />
                     </Card>
                 </div>

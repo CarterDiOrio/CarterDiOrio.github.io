@@ -56,14 +56,16 @@ const TocItem = ({ items, activeId, depth }: any) => {
             {
                 items.map((item: any) => {
                     const variant = item.url === `#${activeId}` ? "tableOfContentsActive" : "tableOfContents";
-                    return <li key={item.url}>
-                        <NavLink href={item.url} variant={`${variant}`}>
-                            {item.title}
-                        </NavLink>
-                        {item.items && 
-                            <TocItem items={item.items} activeId={activeId} depth={depth+1} />
-                        }
-                    </li>                    
+                    return (
+                        <li key={item.url}>
+                            <NavLink href={item.url} variant={`${variant}`} style={{ fontSize: `${18 - 3*depth}px`, opacity: `${1 - 0.2*depth}` }}>
+                                {item.title}
+                            </NavLink>
+                            {item.items && 
+                                <TocItem items={item.items} activeId={activeId} depth={depth+1} />
+                            }
+                        </li>                    
+                    )
                 })
             }
         </ul>
