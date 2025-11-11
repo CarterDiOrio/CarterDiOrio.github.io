@@ -47,6 +47,15 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                         >
                             Carter DiOrio
                         </Heading>
+                        
+                       <Text
+                            sx={{
+                                    color: "muted",
+                                    fontSize: "12px",
+                                    fontWeight: "bold",
+                            }}>
+                            Autonomy Engineer @ Caterpillar
+                       </Text>
 
                         <NavLink
                             href="https://www.mccormick.northwestern.edu/robotics/"
@@ -66,7 +75,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                                     },
                                 }}
                             >
-                                MSR Student @ Northwestern
+                                MSR @ Northwestern
                             </Text>
                         </NavLink>
                     </div>
