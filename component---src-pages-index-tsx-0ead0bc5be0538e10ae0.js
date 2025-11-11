@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[245],{2783:function(t,e,r){r.r(e),r.d(e,{Head:function(){return n}});var o=r(4479),i=r(4848);e.default=()=>(0,i.jsx)(o.default,{});const n=()=>(0,i.jsx)("title",{children:"Carter DiOrio"})}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-0ead0bc5be0538e10ae0.js.map
